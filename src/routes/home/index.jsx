@@ -77,10 +77,16 @@ class TabBarExample extends React.Component {
     )
   }
   componentDidMount() {
-    setTimeout(() => {
-      ReactDOM.findDOMNode(this.screenPIc).style.opacity = 0
-      this.setState({ screenShow: true })
-    }, 3000)
+    var screenPIc = ReactDOM.findDOMNode(this.screenPIc)
+    // screenPIc.style.opacity = 0;
+    screenPIc.addEventListener(
+      'webkitAnimationEnd',
+      () => {
+        this.setState({ screenShow: true })
+        // alert('transitionend事件触发')
+      },
+      false
+    )
   }
   render() {
     let mainConet
