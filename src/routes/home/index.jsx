@@ -77,8 +77,8 @@ class TabBarExample extends React.Component {
     )
   }
   componentDidMount() {
-    ReactDOM.findDOMNode(this.screenPIc).style.opacity = 0
     setTimeout(() => {
+      ReactDOM.findDOMNode(this.screenPIc).style.opacity = 0
       this.setState({ screenShow: true })
     }, 3000)
   }
