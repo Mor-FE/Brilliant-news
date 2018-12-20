@@ -103,7 +103,9 @@ class TabBarExample extends React.Component {
             background:
               'url(../../assets/images/p44315582.gif) center center /  contain  no-repeat',
             backgroundColor: '#fff',
-            animation: 'fadeIn 3s',
+            animation: 'fadeIn 2000ms  linear',
+            animationIterationCount: 1.5,
+            animationDelay: '300ms',
             width: '100%',
             height: '100%'
           }}
